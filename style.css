@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Prompt&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Prompt&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Permanent+Marker&family=Prompt&display=swap");
+* {
+  margin: 0;
+}
+
+p {
+  color: #008a8b;
+}
+
+.nav-item {
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: 300;
+}
+
+body {
+  background-color: #afe7e2;
+  height: 100vh;
+}
+
+header {
+  background-color: #008a8b;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header img {
+  width: 5%;
+}
+
+.servicios {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.card {
+  background-color: #65b6c9;
+  padding: 5%;
+  margin: 15px;
+  border-radius: 25px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card img {
+  height: 125px;
+  width: 225px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: blue;
+  margin-bottom: 5px;
+}
+
+.card .card-title {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+.card .card-text {
+  color: black;
+}
+
+h1 {
+  font-family: 'Prompt', sans-serif;
+  font-size: 4em;
+  text-align: center;
+}
+
+h2 {
+  margin: 20px;
+  font-size: 3em;
+  font-family: 'Pacifico', cursive;
+  text-align: center;
+}
+
+main {
+  width: 90%;
+  height: 100px;
+}
+
+main .home {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main img {
+  width: 50%;
+  display: block;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .content {
+  background-color: aquamarine;
+  text-align: center;
+  padding: 5%;
+  border-color: 2px black;
+}
+
+main .content label {
+  padding: 2%;
+  margin: 2px;
+}
+
+footer {
+  width: 50%;
+  position: 0;
+}
+/*# sourceMappingURL=style.css.map */

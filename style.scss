@@ -1,0 +1,129 @@
+//fuentes
+@import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+//font-family: 'Prompt', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Prompt&display=swap');
+//font-family: 'Pacifico', cursive;
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Permanent+Marker&family=Prompt&display=swap');
+//font-family: 'Permanent Marker', cursive;
+//variables
+$color1: rgb(0,
+138,
+139);
+$color2: rgb(101,
+182,
+201);
+$color3:rgb(101,
+182,
+201);
+$color4: rgb(175,
+231,
+226);
+$color5: rgb(242,
+172,
+201);
+$color6: rgb(254,
+123,
+95);
+* {
+    margin: 0;
+}
+
+@mixin fonts {
+    color: $color1;
+}
+
+@mixin list {
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+p {
+    @include fonts;
+}
+
+.nav-item {
+    @include list;
+}
+
+body {
+    background-color: $color4;
+    height: 100vh;
+}
+
+header {
+    background-color: $color1;
+    justify-content: space-between;
+    img {
+        width: 5%;
+    }
+}
+
+.servicios {
+    display: flex;
+    flex-direction: row;
+}
+
+.card {
+    background-color: $color3;
+    padding: 5%;
+    margin: 15px;
+    border-radius: 25px;
+    justify-content: space-between;
+    img {
+        height: 125px;
+        width: 225px;
+        align-items: center;
+        justify-content: center;
+        border: blue;
+        margin-bottom: 5px;
+    }
+    .card-title {
+        font-size: 1.5em;
+        margin-bottom: 15px;
+    }
+    .card-text {
+        color: black;
+    }
+}
+
+h1 {
+    font-family: 'Prompt', sans-serif;
+    font-size: 4em;
+    text-align: center;
+}
+
+h2 {
+    margin: 20px;
+    font-size: 3em;
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+}
+
+main {
+    width: 90%;
+    height: 100px;
+    .home {
+        justify-content: center;
+    }
+    img {
+        width: 50%;
+        display: block;
+        justify-content: center;
+    }
+    .content {
+        background-color: aquamarine;
+        text-align: center;
+        padding: 5%;
+        border-color: 2px black;
+        label {
+            padding: 2%;
+            margin: 2px;
+        }
+    }
+}
+
+footer {
+    width: 50%;
+    position: 0;
+}
