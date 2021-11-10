@@ -4,7 +4,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Prompt&display=swap');
 //font-family: 'Pacifico', cursive;
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Permanent+Marker&family=Prompt&display=swap');
-//font-family: 'Permanent Marker', cursive;
+//font-family: 'Permanent Marker', cursive
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+//font-family: 'Poppins', sans-serif;
 //variables
 $color1: rgb(0,
 138,
@@ -24,8 +26,21 @@ $color5: rgb(242,
 $color6: rgb(254,
 123,
 95);
+$color6: rgb(37,
+35,
+34);
+
+$color11: #FFFFFF;
+$color22: #000000;
+$color33: #ED6755;
+$color44: #2C3E50;
+//$gradient: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(49,71,60,1) 48%, rgba(127,145,119,1) 100%);
+$gradient:rgb(15, 43, 38);
+
+
 * {
     margin: 0;
+    padding: 0;
 }
 
 @mixin fonts {
@@ -40,6 +55,7 @@ $color6: rgb(254,
 
 p {
     @include fonts;
+    text-align: center;
 }
 
 .nav-item {
@@ -47,15 +63,80 @@ p {
 }
 
 body {
-    background-color: $color4;
     height: 100vh;
-}
-
-header {
-    background-color: $color1;
-    justify-content: space-between;
-    img {
-        width: 5%;
+    background-color: $color4;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    header {
+        background-color: $color1;
+        height: 80px;
+        justify-content: space-between;
+        width: 100%;
+        img {
+            width: 5%;
+            border-radius: 50px;
+        }
+        li {
+            &:hover {
+                transition: transform 1s;
+                transform: scale(1.2);
+                color: black;
+                font-weight: 500;
+            }
+        }
+        }
+    main {
+        width: 100%;
+        height: 90%;
+        margin-bottom: 100px;
+        //display: flex;
+        .home {
+            justify-content: center;
+            //display: flex;
+            flex-direction: row;
+        }
+        img {
+            width: 50%;
+            //display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 25%;
+        }
+        .content {
+            background-color: aquamarine;
+            text-align: center;
+            padding: 5%;
+            border-color: 2px black;
+            label {
+                padding: 2%;
+                margin: 2px;
+            }
+        }
+        }
+    footer {
+        justify-content: center;
+        height: 8%;
+        width: 100%;
+        //margin: 3%;
+        background-color: $gradient;
+        display: flex;
+        flex-direction: row;
+        p{
+            justify-content: center;
+            font-family: 'Permanent Marker', cursive;
+            
+        }
+        img {
+            margin-left: 35px;
+            height: 30px;
+            justify-content: space-between;
+            &:hover {
+                transition: transform 1s;
+                transform: scale(1.5);
+            }
+        }
     }
 }
 
@@ -67,12 +148,18 @@ header {
 .card {
     background-color: $color3;
     padding: 5%;
-    margin: 15px;
+    margin: 10%;
     border-radius: 25px;
     justify-content: space-between;
+    &:hover {
+        box-shadow: 10px 54px 67px 0px rgba(0, 0, 0, 0.75);
+        //transition: transform 2s;
+        transition: 2s ease-in-out;
+        transform: scale(1.2);
+    }
     img {
-        height: 125px;
-        width: 225px;
+        height: 50%;
+        width: 50%;
         align-items: center;
         justify-content: center;
         border: blue;
@@ -89,41 +176,128 @@ header {
 
 h1 {
     font-family: 'Prompt', sans-serif;
+    font-weight: 700;
     font-size: 4em;
     text-align: center;
+    margin: 5px;
+      text-transform: uppercase;
+      text-align: center;
 }
 
 h2 {
-    margin: 20px;
+    margin: 30px;
+    font-weight: 300;
     font-size: 3em;
-    font-family: 'Pacifico', cursive;
+    //font-family: 'Pacifico', cursive;
     text-align: center;
+    margin-bottom: 50px;
 }
 
-main {
-    width: 90%;
-    height: 100px;
-    .home {
-        justify-content: center;
-    }
-    img {
-        width: 50%;
-        display: block;
-        justify-content: center;
-    }
-    .content {
-        background-color: aquamarine;
-        text-align: center;
+h3 {
+    font-size: 1.8em;
+    text-align: center;
+    margin: 20px;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 10px;
+      
+  }
+
+  h1,
+h3 {
+  font-weight: 600;
+}
+
+p {
+    font-size: 1rem;
+    //margin: 5%;
+  }
+
+  a,
+a:visited {
+  text-decoration: none;
+  color:$color33;
+}
+
+
+.login{
+    background: url('./assets/fondo-login.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: $color11;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+  
+      font-family: 'Poppins', sans-serif;
+      .texto{
+          color: $color44;
+      }
+  }
+  
+  .containerL{
+        margin: 5%;
         padding: 5%;
-        border-color: 2px black;
-        label {
-            padding: 2%;
-            margin: 2px;
+        border-radius: 10%;
+        background-color: $color11;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 450px;
+        .registrar{
+          text-align: center;
+          justify-content: center;
         }
+        
+        .btn {
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: center;
+          //display: inline-block;
+          font-size: 1em;
+          margin: 5%;
+          margin-left: 150px;
+          padding: 10px 20px;
+          //border: 2px solid;
+          cursor: pointer;
+    
+        }
+        //animation: bounce; /* referring directly to the animation's @keyframe declaration */
+        //animation-duration: 5s; /* don't forget to set a duration! */
+  
+  }
+  /* 
+  .animate__animated.animate__bounce {
+    --animate-duration: 3s;
+  } */
+  
+  /* This changes all the animations globally */
+  :root {
+    --animate-duration: 800ms;
+    --animate-delay: 0.9s;
+  }
+  .form-gray{
+    background-color: $color11;
+    label{
+      font-size: 1.2em;
+      text-align: left;
+      margin-right: 10px;
     }
-}
-
-footer {
-    width: 50%;
-    position: 0;
-}
+    input{
+      padding: 10px 10px;
+      margin: 5px;
+      border-radius: 10px;
+      align-items: right;
+      justify-content: right;
+    }
+    .txt-gray{
+      margin-top: 10px;
+    }
+   
+  }
+  
+  
