@@ -2,6 +2,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Prompt&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Permanent+Marker&family=Prompt&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+:root {
+  --main-dark-color: #354d1c;
+  --main-blank-color: #b7d796;
+  --main-green-color: #64b412;
+  --main-black-color: #101110;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -16,6 +23,50 @@ p {
   text-decoration: none;
   font-size: 1.2em;
   font-weight: 300;
+}
+
+.menu {
+  position: relative;
+  display: inline-block;
+}
+
+.menu:hover .dropdown {
+  display: block;
+}
+
+.menu .dropdown {
+  background-color: white;
+  font-size: 1em;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+/* .dropdown {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    padding: 12px 16px;
+    z-index: 9;
+    top: 35px;
+    right: -30px;
+} */
+.dropdown li {
+  list-style-type: none;
+}
+
+.description {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  font-size: 1.5em;
+}
+
+img {
+  width: 70%;
 }
 
 body {
@@ -62,6 +113,8 @@ body main {
   width: 100%;
   height: 90%;
   margin-bottom: 100px;
+  /* padre relativo */
+  /* hijo absolute */
 }
 
 body main .home {
@@ -95,6 +148,97 @@ body main .content {
 body main .content label {
   padding: 2%;
   margin: 2px;
+}
+
+body main .product {
+  background-color: #FFFFFF;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  align-items: center;
+  margin: 5% 25% 5% 25%;
+  -webkit-box-shadow: black;
+          box-shadow: black;
+  border: 0.5px solid;
+  border-radius: 50px;
+}
+
+body main .product p {
+  color: var(--main-black-color);
+  padding: 15px;
+}
+
+body main .product .precio {
+  color: var(--main-dark-color);
+  font-size: 1.5em;
+  display: inline-block;
+  margin: 0 0.5rem;
+  -webkit-animation: bounce;
+          animation: bounce;
+  /* referring directly to the animation's @keyframe declaration */
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  /* don't forget to set a duration! */
+}
+
+body main .imgContainer {
+  padding: 5%;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* referring directly to the animation's @keyframe declaration */
+  /* don't forget to set a duration! */
+}
+
+body main .imgContainer .heart {
+  position: absolute;
+  color: var(--main-green-color);
+  width: 30%;
+}
+
+body main .myButton {
+  -webkit-box-shadow: 0px 2px 1px 0px #55544f;
+          box-shadow: 0px 2px 1px 0px #55544f;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #ffec64), to(#ffab23));
+  background: linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+  background-color: #ffec64;
+  border-radius: 6px;
+  border: 1px solid #ffaa22;
+  display: inline-block;
+  cursor: pointer;
+  color: #333333;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  margin: 5%;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #ffee66;
+}
+
+body main .myButton:hover {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #ffab23), to(#ffec64));
+  background: linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+  background-color: #ffab23;
+}
+
+body main .myButton:active {
+  position: relative;
+  top: 1px;
 }
 
 body footer {
