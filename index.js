@@ -4,5 +4,6 @@ const h1 = document.getElementById('h1');
 
 icon.onclick = function() {
     h1.style.color = "red";
-    imgMain.style.width = "100%";
+    imgMain.style.width = "70%";
+
 }

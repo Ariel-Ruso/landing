@@ -1,412 +1,489 @@
-//fuentes
-@import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
-//font-family: 'Prompt', sans-serif;
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Prompt&display=swap');
-//font-family: 'Pacifico', cursive;
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Permanent+Marker&family=Prompt&display=swap');
-//font-family: 'Permanent Marker', cursive
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
-//font-family: 'Poppins', sans-serif;
-//variables
-$color1: rgb(0,
-138,
-139);
-$color2: rgb(101,
-182,
-201);
-$color3:rgb(101,
-182,
-201);
-$color4: rgb(175,
-231,
-226);
-$color5: rgb(242,
-172,
-201);
-$color6: rgb(254,
-123,
-95);
-$color6: rgb(37,
-35,
-34);
-$color11: #FFFFFF;
-$color22: #000000;
-$color33: #ED6755;
-$color44: #2C3E50;
-:root {
-    --main-dark-color: #354d1c;
-    --main-blank-color: #b7d796;
-    --main-green-color: #64b412;
-    --main-black-color: #101110;
-}
-
-$gradient:rgb(15,
-43,
-38);
-* {
-    margin: 0;
-    padding: 0;
-}
-
-@mixin fonts {
-    color: $color1;
-}
-
-@mixin list {
-    text-decoration: none;
-    font-size: 1.2em;
-    font-weight: 300;
-}
-
-p {
-    @include fonts;
-    text-align: center;
-}
-
-.nav-item {
-    @include list;
-}
-
-.menu {
-    position: relative;
-    display: inline-block;
-    &:hover .dropdown {
-        display: block;
-    }
-    .dropdown {
-        background-color: white;
-        font-size: 1em;
-        flex-direction: row;
-    }
-}
-
-//hamburguesa
-
-/* .dropdown {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 160px;
-    padding: 12px 16px;
-    z-index: 9;
-    top: 35px;
-    right: -30px;
-} */
-
-.dropdown li {
-    list-style-type: none;
-}
-
-.description {
-    align-items: center;
-    margin: auto;
-    font-size: 1.5em;
-}
-
-img {
-    width: 70%;
-}
-
-body {
-    height: 100vh;
-    background-color: $color4;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-    header {
-        background-color: $color1;
-        height: 80px;
-        justify-content: space-between;
-        width: 100%;
-        img {
-            width: 5%;
-            border-radius: 50px;
+        //fuentes
+        @import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+        //font-family: 'Prompt', sans-serif;
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Prompt&display=swap');
+        //font-family: 'Pacifico', cursive;
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Permanent+Marker&family=Prompt&display=swap');
+        //font-family: 'Permanent Marker', cursive
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+        //font-family: 'Poppins', sans-serif;
+        //variables
+        $color1: rgb(0,
+        138,
+        139);
+        $color2: rgb(101,
+        182,
+        201);
+        $color3:rgb(101,
+        182,
+        201);
+        $color4: rgb(175,
+        231,
+        226);
+        $color5: rgb(242,
+        172,
+        201);
+        $color6: rgb(254,
+        123,
+        95);
+        $color7: rgb(37,
+        35,
+        34);
+        $color11: #FFFFFF;
+        $color22: #000000;
+        $color33: #ED6755;
+        $color44: #2C3E50;
+         :root {
+            --main-dark-color: #354d1c;
+            --main-blank-color: #b7d796;
+            --main-green-color: #64b412;
+            --main-black-color: #101110;
         }
-        li {
-            &:hover {
-                transition: transform 1s;
-                transform: scale(1.2);
-                color: black;
-                font-weight: 500;
+        
+        $gradient:rgb(15,
+        43,
+        38);
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        @mixin fonts {
+            color: $color1;
+        }
+        
+        @mixin list {
+            text-decoration: none;
+            font-size: 1.5em;
+            font-weight: 300;
+        }
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1;
+            grid-template-rows: 20% auto 15%;
+        }
+        
+        body {
+            width: 100%;
+            background-color: $color4;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            header {
+                background-color: $color1;
+                height: 80px;
+                width: 100%;
+                display: block;
+                justify-content: space-between;
+                .menu {
+                    align-items: center;
+                    display: flex;
+                    img {
+                        width: 5%;
+                        border-radius: 50px;
+                    }
+                    .menuItems {
+                        @include list;
+                        display: flex;
+                        list-style: none;
+                        li {
+                            border-radius: 3px;
+                            a {
+                                padding: 7px;
+                                display: block;
+                            }
+                            &:hover {
+                                transition: transform 1s;
+                                transform: scale(1.2);
+                                color: black;
+                                font-weight: 500;
+                            }
+                        }
+                    }
+                    .btnMenu {
+                        display: none;
+                        justify-content: right;
+                        align-items: right;
+                        margin-right: 30px;
+                        font-size: 25px;
+                        cursor: pointer;
+                        img {
+                            width: 5%;
+                        }
+                    }
+                }
+            }
+            main {
+                width: 100%;
+                height: calc(100%-125px);
+                margin-bottom: 100px;
+                //display: flex;
+                p {
+                    margin: 10px 10% 10px 10%;
+                }
+                .home {
+                    justify-content: center;
+                    //display: flex;
+                    flex-direction: row;
+                    p {
+                        margin: 1%;
+                    }
+                }
+                img {
+                    width: 50%;
+                    //display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-left: 25%;
+                }
+                .content {
+                    background-color: aquamarine;
+                    text-align: center;
+                    padding: 5%;
+                    border-color: 2px black;
+                    label {
+                        padding: 2%;
+                        margin: 2px;
+                    }
+                }
+                .product {
+                    background-color: $color11;
+                    justify-content: center;
+                    align-items: center;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin: 5% 25% 5% 25%;
+                    //height: 50%;
+                    //width: 70%;
+                    box-shadow: black;
+                    border: 0.5px solid;
+                    border-radius: 50px;
+                    p {
+                        color: var(--main-black-color);
+                        padding: 15px;
+                    }
+                    .precio {
+                        color: var(--main-dark-color);
+                        font-size: 1.5em;
+                        display: inline-block;
+                        margin: 0 0.5rem;
+                        animation: bounce;
+                        /* referring directly to the animation's @keyframe declaration */
+                        animation-duration: 2s;
+                        /* don't forget to set a duration! */
+                    }
+                }
+                /* padre relativo */
+                .imgContainer {
+                    padding: 5%;
+                    position: relative;
+                    align-items: center;
+                    justify-content: center;
+                    //animation: bounce;
+                    /* referring directly to the animation's @keyframe declaration */
+                    //animation-duration: 2s;
+                    /* don't forget to set a duration! */
+                }
+                /* hijo absolute */
+                .imgContainer .heart {
+                    position: absolute;
+                    color: var(--main-green-color);
+                    width: 30%;
+                }
+                .myButton {
+                    box-shadow: 0px 2px 1px 0px #55544f;
+                    background: linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+                    background-color: #ffec64;
+                    border-radius: 6px;
+                    border: 1px solid #ffaa22;
+                    display: inline-block;
+                    cursor: pointer;
+                    color: #333333;
+                    font-family: Arial;
+                    font-size: 15px;
+                    font-weight: bold;
+                    padding: 6px 24px;
+                    margin: 5%;
+                    text-decoration: none;
+                    text-shadow: 0px 1px 0px #ffee66;
+                    &:hover {
+                        background: linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+                        background-color: #ffab23;
+                    }
+                    &:active {
+                        position: relative;
+                        top: 1px;
+                    }
+                }
+            }
+            footer {
+                font-size: 1.5em;
+                justify-content: center;
+                height: 45px;
+                width: 100%;
+                background-color: $color44;
+                display: flex;
+                flex-direction: row;
+                //justify-content: space-between;
+                p {
+                    a {
+                        justify-content: center;
+                        font-family: 'Permanent Marker', cursive;
+                        color: $color5;
+                    }
+                }
+                img {
+                    margin-left: 35px;
+                    height: 30px;
+                    width: 30px;
+                    justify-content: space-between;
+                    &:hover {
+                        transition: transform 1s;
+                        transform: scale(1.5);
+                    }
+                }
             }
         }
-    }
-    main {
-        width: 100%;
-        height: 90%;
-        margin-bottom: 100px;
-        //display: flex;
-        .home {
-            justify-content: center;
-            //display: flex;
+        
+        .servicios {
+            display: flex;
             flex-direction: row;
         }
-        img {
-            width: 50%;
-            //display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-left: 25%;
-        }
-        .content {
-            background-color: aquamarine;
-            text-align: center;
+        
+        .card {
+            background-color: $color3;
             padding: 5%;
-            border-color: 2px black;
-            label {
-                padding: 2%;
-                margin: 2px;
+            margin: 10%;
+            border-radius: 25px;
+            justify-content: space-between;
+            &:hover {
+                box-shadow: 10px 54px 67px 0px rgba(0, 0, 0, 0.75);
+                //transition: transform 2s;
+                transition: 2s ease-in-out;
+                transform: scale(1.2);
+            }
+            img {
+                height: 50%;
+                width: 50%;
+                align-items: center;
+                justify-content: center;
+                border: blue;
+                margin-bottom: 5px;
+            }
+            .card-title {
+                font-size: 1.5em;
+                margin-bottom: 15px;
+            }
+            .card-text {
+                color: black;
             }
         }
-        .product {
+        
+        h1 {
+            font-family: 'Prompt', sans-serif;
+            font-weight: 700;
+            font-size: 4em;
+            text-align: center;
+            margin: 5px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        
+        h2 {
+            margin: 30px;
+            font-weight: 300;
+            font-size: 3em;
+            //font-family: 'Pacifico', cursive;
+            text-align: center;
+            margin-bottom: 50px;
+            //border: 2px dashed #000000;
+        }
+        
+        h3 {
+            font-size: 1.8em;
+            text-align: center;
+            margin: 20px;
+            border-style: solid;
+            border-width: 3px;
+            border-radius: 10px;
+        }
+        
+        p {
+            font-size: 1rem;
+            @include fonts;
+            text-align: center;
+        }
+        
+        a,
+        a:visited {
+            text-decoration: none;
+            color: $color22;
+        }
+        
+        .login {
+            background: url('./assets/fondo-login.jpeg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: $color11;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Poppins', sans-serif;
+            .texto {
+                color: $color44;
+            }
+        }
+        
+        .containerL {
+            margin: 5%;
+            padding: 5%;
+            border-radius: 10%;
             background-color: $color11;
             justify-content: center;
             align-items: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 5% 25% 5% 25%;
-            //height: 50%;
-            //width: 70%;
-            box-shadow: black;
-            border: 0.5px solid;
-            border-radius: 50px;
-            p {
-                color: var(--main-black-color);
-                padding: 15px;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 450px;
+            .registrar {
+                text-align: center;
+                justify-content: center;
             }
-            .precio {
-                color: var(--main-dark-color);
+            .btn {
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                //display: inline-block;
+                font-size: 1em;
+                margin: 5%;
+                margin-left: 150px;
+                padding: 10px 20px;
+                //border: 2px solid;
+                cursor: pointer;
+            }
+        }
+        
+        .form-gray {
+            background-color: $color11;
+            label {
+                font-size: 1.2em;
+                text-align: left;
+                margin-right: 10px;
+            }
+            input {
+                padding: 10px 10px;
+                margin: 5px;
+                border-radius: 10px;
+                align-items: right;
+                justify-content: right;
+            }
+            .txt-gray {
+                margin-top: 10px;
+            }
+        }
+        
+        //media queries
+        @media (max-width: 360px) {
+            h1 {
+                font-size: 2em;
+                padding-top: 20px;
+            }
+            h2 {
                 font-size: 1.5em;
-                display: inline-block;
-                margin: 0 0.5rem;
-                animation: bounce;
-                /* referring directly to the animation's @keyframe declaration */
-                animation-duration: 2s;
-                /* don't forget to set a duration! */
+            }
+            body {
+                height: 650px;
+                width: 150px;
+                header {
+                    height: 20%;
+                    width: 100%;
+                    flex-direction: column;
+                    .menu {
+                        .menuItems {
+                            position: fixed;
+                            width: 100%;
+                            height: calc(100% - 80px);
+                            top: -100vh;
+                            text-align: center;
+                            transition: all .4s;
+                            display: none;
+                            position: absolute;
+                            background-color: white;
+                            min-width: 160px;
+                            padding: 12px 16px;
+                            z-index: 9;
+                            top: 35px;
+                            right: -30px;
+                            li {
+                                border-radius: 3px;
+                                a {
+                                    padding: 7px;
+                                    display: block;
+                                }
+                                &:hover {
+                                    transition: transform 1s;
+                                    transform: scale(1.2);
+                                    color: black;
+                                    font-weight: 500;
+                                }
+                            }
+                        }
+                        //hamburguesa
+                        .dropdown {
+                            display: none;
+                            position: absolute;
+                            background-color: white;
+                            min-width: 160px;
+                            padding: 12px 16px;
+                            z-index: 9;
+                            top: 35px;
+                            right: -30px;
+                        }
+                        .btnMenu {
+                            display: inline-flex;
+                        }
+                    }
+                }
+                .home {
+                    p {
+                        margin: 10%;
+                    }
+                    img {
+                        width: 70%;
+                        justify-content: center;
+                        align-items: center;
+                        margin-left: 15%;
+                    }
+                }
+                main {
+                    height: 50%;
+                }
+                footer {
+                    font-size: 1.55em;
+                    justify-content: center;
+                    height: 45%;
+                    width: 100%;
+                    background-color: $gradient;
+                    display: flex;
+                    flex-direction: row;
+                    //justify-content: space-between;
+                    p {
+                        justify-content: center;
+                        font-family: 'Permanent Marker', cursive;
+                    }
+                    img {
+                        margin-left: 25px;
+                        height: 20px;
+                        width: 20px;
+                        justify-content: space-between;
+                        &:hover {
+                            transition: transform 1s;
+                            transform: scale(1.5);
+                        }
+                    }
+                }
             }
         }
-        /* padre relativo */
-        .imgContainer {
-            padding: 5%;
-            position: relative;
-            align-items: center;
-            justify-content: center;
-            //animation: bounce;
-            /* referring directly to the animation's @keyframe declaration */
-            //animation-duration: 2s;
-            /* don't forget to set a duration! */
-        }
-        /* hijo absolute */
-        .imgContainer .heart {
-            position: absolute;
-            color: var(--main-green-color);
-            width: 30%;
-        }
-        .myButton {
-            box-shadow: 0px 2px 1px 0px #55544f;
-            background: linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
-            background-color: #ffec64;
-            border-radius: 6px;
-            border: 1px solid #ffaa22;
-            display: inline-block;
-            cursor: pointer;
-            color: #333333;
-            font-family: Arial;
-            font-size: 15px;
-            font-weight: bold;
-            padding: 6px 24px;
-            margin: 5%;
-            text-decoration: none;
-            text-shadow: 0px 1px 0px #ffee66;
-            &:hover {
-                background: linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
-                background-color: #ffab23;
-            }
-            &:active {
-                position: relative;
-                top: 1px;
-            }
-        }
-    }
-    footer {
-        justify-content: center;
-        height: 8%;
-        width: 100%;
-        //margin: 3%;
-        background-color: $gradient;
-        display: flex;
-        flex-direction: row;
-        p {
-            justify-content: center;
-            font-family: 'Permanent Marker', cursive;
-        }
-        img {
-            margin-left: 35px;
-            height: 30px;
-            justify-content: space-between;
-            &:hover {
-                transition: transform 1s;
-                transform: scale(1.5);
-            }
-        }
-    }
-}
-
-.servicios {
-    display: flex;
-    flex-direction: row;
-}
-
-.card {
-    background-color: $color3;
-    padding: 5%;
-    margin: 10%;
-    border-radius: 25px;
-    justify-content: space-between;
-    &:hover {
-        box-shadow: 10px 54px 67px 0px rgba(0, 0, 0, 0.75);
-        //transition: transform 2s;
-        transition: 2s ease-in-out;
-        transform: scale(1.2);
-    }
-    img {
-        height: 50%;
-        width: 50%;
-        align-items: center;
-        justify-content: center;
-        border: blue;
-        margin-bottom: 5px;
-    }
-    .card-title {
-        font-size: 1.5em;
-        margin-bottom: 15px;
-    }
-    .card-text {
-        color: black;
-    }
-}
-
-h1 {
-    font-family: 'Prompt', sans-serif;
-    font-weight: 700;
-    font-size: 4em;
-    text-align: center;
-    margin: 5px;
-    text-transform: uppercase;
-    text-align: center;
-}
-
-h2 {
-    margin: 30px;
-    font-weight: 300;
-    font-size: 3em;
-    //font-family: 'Pacifico', cursive;
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-h3 {
-    font-size: 1.8em;
-    text-align: center;
-    margin: 20px;
-    border-style: solid;
-    border-width: 3px;
-    border-radius: 10px;
-}
-
-h1,
-h3 {
-    font-weight: 600;
-}
-
-p {
-    font-size: 1rem;
-    //margin: 5%;
-}
-
-a,
-a:visited {
-    text-decoration: none;
-    color: $color33;
-}
-
-.login {
-    background: url('./assets/fondo-login.jpeg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: $color11;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Poppins', sans-serif;
-    .texto {
-        color: $color44;
-    }
-}
-
-.containerL {
-    margin: 5%;
-    padding: 5%;
-    border-radius: 10%;
-    background-color: $color11;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 450px;
-    .registrar {
-        text-align: center;
-        justify-content: center;
-    }
-    .btn {
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        //display: inline-block;
-        font-size: 1em;
-        margin: 5%;
-        margin-left: 150px;
-        padding: 10px 20px;
-        //border: 2px solid;
-        cursor: pointer;
-    }
-    //animation: bounce; /* referring directly to the animation's @keyframe declaration */
-    //animation-duration: 5s; /* don't forget to set a duration! */
-}
-
-
-/* 
-  .animate__animated.animate__bounce {
-    --animate-duration: 3s;
-  } */
-
-
-/* This changes all the animations globally */
-
- :root {
-    --animate-duration: 800ms;
-    --animate-delay: 0.9s;
-}
-
-.form-gray {
-    background-color: $color11;
-    label {
-        font-size: 1.2em;
-        text-align: left;
-        margin-right: 10px;
-    }
-    input {
-        padding: 10px 10px;
-        margin: 5px;
-        border-radius: 10px;
-        align-items: right;
-        justify-content: right;
-    }
-    .txt-gray {
-        margin-top: 10px;
-    }
-}
